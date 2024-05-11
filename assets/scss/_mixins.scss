@@ -17,6 +17,11 @@
                 background-color: $primary;
                 border: 1px solid $primary;
                 color:  #fff;;
+                @media screen and (max-width: 768px) {
+                    background-color: #fff;
+                    border: 1px solid $primary;
+                    color: $primary;
+                }
             }
         }
         &:hover{
@@ -43,9 +48,11 @@
     }
     &:active{
         background-color: $primary!important;
+        color: white;
     }
     &:focus{
         background-color: $primary;
+        color: white;
     }
 }
 
@@ -166,7 +173,7 @@
                 }
             }
         }
-        input{
+        input,textarea{
             &.form-control{
                 border: 0px;
                 border-bottom: 2px solid $primary;
@@ -177,7 +184,62 @@
             &:focus{
                 box-shadow: none;
             }
+            &[type=checkbox]{
+                position: relative;
+                display: none;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                &~label{
+                    position: relative;
+                    
+                    cursor: pointer;
+                    font-weight: 500;
+                    left: 0;
+                    pointer-events: all;
+                    padding: 0;
+                    padding-left: 30px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        opacity: 1;
+                        left: 0;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $primary;
+                        transition: all 0.3s linear;
+                    }
+                  &::after{
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        opacity: 0;
+                        left: 7px;
+                        width: 8px;
+                        height: 15px;
+                        border: 2px solid white;
+                        border-top: none;
+                        border-left: none;
+                        transform: rotate(45deg);
+                        transition: all 0.3s linear;
+                    }
+                }
+                &:checked{
+                  
+                    &~label{
+                        color: $primary;
+                       &::before{
+                           background-color: $primary;
+                       }
+                       &::after{
+                        opacity: 1;
+                       }
+                    }
+                   }
+            }
         }
+      
         &.filled{
             label{
                 top: -30px;
@@ -191,6 +253,7 @@
                 }
             }
         }
+        
     }
  
    

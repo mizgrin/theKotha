@@ -314,51 +314,57 @@ footer{
                     }
                 }
             }
-            &.footer-widget{
-                height: 100%;
-                ul{
-                    justify-content: end;
-                    height: 100%;
-                    @media screen and (max-width: 1024px) {
-                        gap: 10px;;
-                    }
-                    @media screen and (max-width: 767px) {
-                        justify-content: center;
-                    }
-                    li{
-                        align-items: center;
-                        a{
-                            color: #252525;
-                            font-size: 16px;
-                            font-weight: 600;
-                            .footer-icon{
-                                i{
-                                    font-size: 20px;
-                                    &.fa{
-                                        &-facebook{
-                                            color: #1877f2;
-                                        }
-                                        &-envelope{
-                                            color: #bd081c;
-                                        }
-                                        &-twitter{
-                                            color: #1da1f2;
-                                        }
-                                        &-instagram{
-                                            color: #c32aa3;
-                                        }
-                                    }
-                                }
-                               
+            
+        }
+    }
+}
+.social-icons-list{
+
+    &.footer-widget{
+        ul{
+            justify-content: end;
+            height: 100%;
+            @media screen and (max-width: 1024px) {
+                gap: 10px;;
+            }
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+            }
+        }
+    }
+    ul{
+       justify-content: start;
+       gap: 15px;
+        li{
+            align-items: center;
+            a{
+                color: #252525;
+                font-size: 16px;
+                font-weight: 600;
+                .footer-icon{
+                    i{
+                        font-size: 20px;
+                        &.fa{
+                            &-facebook{
+                                color: #1877f2;
+                            }
+                            &-envelope{
+                                color: #bd081c;
+                            }
+                            &-twitter{
+                                color: #1da1f2;
+                            }
+                            &-instagram{
+                                color: #c32aa3;
                             }
                         }
                     }
+                   
                 }
             }
         }
     }
 }
-
 .auth-section{
     height: 100vh;
     display: flex; 
@@ -413,5 +419,169 @@ footer{
         @media screen and (max-width: 767px) {
             display: none;
         }
+    }
+}
+
+.listed-items-inner{
+    
+    .filter-wrap{
+        padding: 20px;
+        background-color: #f5f5f57d;
+        .top-search{
+            form{
+                @include form;
+            }
+        }
+        .bottom-cat-filter{
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 10px;
+            @include form;
+            h6{
+                color: #252525;
+                margin-bottom: 10px;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                li{
+                    background-color:transparent;
+                    display:inline-block;
+                    border: none;
+                    width: auto;
+                    padding: 0;
+                }
+            }
+            .form-group{
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            position: absolute;
+            bottom: 50px;
+           display: none;
+            background-color: white;
+            max-height: calc(100% - 50px);
+           
+            overflow: scroll;
+            z-index: 99;
+            left: 0;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+                height: calc(100% - 50px);
+            }
+        }
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            bottom: 50px;
+           display: none;
+            background-color: white;
+            max-height: calc(100% - 50px);
+           
+            overflow: scroll;
+            z-index: 99;
+            left: 0;
+            transition: all 00.3s linear;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+                height: calc(100% - 50px);
+            }
+        }
+    }
+    .room-inner-wrap{
+        @include roomCard;
+       
+    }
+}
+.banner-wrap{
+   height: 40vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background-color: #f1f1f1;
+   padding-top:70px ;
+   .breadcrumb{
+    text-align: center;
+    justify-content: center;
+     li{
+       a{
+         color: $primary;
+         font-weight: 600;
+       }
+     }
+   }
+}
+
+  
+
+.contact-wrapper{
+    padding:50px 0px 60px;
+    @include title;
+    .contact-form{
+        border-right: 1px solid #ddd;
+        background-color: white;
+        padding: 20px;
+        form{
+            @include form;
+        }
+    }
+    .contact-sidebar{
+        .contact-widget{
+            padding:10px 20px;
+      
+         
+            margin-bottom: 20px;
+            ul{
+                margin-left: 0;
+                li{
+                    line-height: 3;
+                    i{
+                        color: $primary;
+                        font-size: 20px;
+
+                    }
+                    span{
+                        margin-left: 15px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+     
+    }
+
+}
+
+.contact-map{
+    .map-holder{
+        height: 400px;
+        width: 100%;
+        iframe{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.filter-btn-small{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    .btn{
+        width: 100%;
+      
+    }
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
+    @media screen and (max-width: 1024px) {
+        display: block;
     }
 }
