@@ -33,21 +33,22 @@ var $grid = $('.grid').isotope({
     }
   })
 
-  $('input').on('focus', function() {
+  $('input:not([type="checkbox"]), textarea').on('focus', function() {
     if ($(this).val().trim() !== '') {
-      $(this).parents('.form-group').addClass('filled');
+      $(this).closest('.form-group').addClass('filled');
     }
-  }).on('blur', function() {
+}).on('blur', function() {
     if ($(this).val().trim() === '') {
-      $(this).parents('.form-group').removeClass('filled');
+      $(this).closest('.form-group').removeClass('filled');
     }
-  }).on('input', function() {
+}).on('input', function() {
     if ($(this).val().trim() !== '') {
-      $(this).parents('.form-group').addClass('filled');
+      $(this).closest('.form-group').addClass('filled');
     } else {
-      $(this).parents('.form-group').removeClass('filled');
+      $(this).closest('.form-group').removeClass('filled');
     }
-  });
+});
+
 
   $('.password-toggler').on('click', function() {
     var inputField = $(this).siblings('input');
@@ -55,5 +56,10 @@ var $grid = $('.grid').isotope({
     inputField.attr('type', newType);
     $(this).toggleClass('shown');
   });
-  
-  
+
+$('#filter-btn').on('click', function() {
+
+$(this).toggleClass('reverse');
+  $('.filter-wrap').slideToggle(300);
+  $('body').toggleClass('overflow-hidden');
+})
