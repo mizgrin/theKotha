@@ -79,6 +79,9 @@ section {
   font-weight: 600;
   color: #252525;
 }
+.header nav .navbar-collapse ul li a.active {
+  color: #fbb13d;
+}
 .header.scrolled {
   box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -158,6 +161,10 @@ h1.hero-title {
 }
 .btn-with-icon i {
   font-size: 14px;
+}
+.btn-accordion {
+  border: none;
+  color: #fbb13d;
 }
 .btn:active {
   background-color: #fbb13d !important;
@@ -1154,4 +1161,181 @@ footer .footer-wrap .footer-menu ul.footer-social li .footer-icon {
   .filter-btn-small {
     display: block;
   }
+}
+
+.about-section .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.about-section .section-title h3 {
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.about-section .section-title h3::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  background-color: #fbb13d;
+  bottom: -10px;
+  right: 0;
+}
+
+.mission-section .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.mission-section .section-title h3 {
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.mission-section .section-title h3::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  background-color: #fbb13d;
+  bottom: -10px;
+  right: 0;
+}
+
+.faq-section .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.faq-section .section-title h3 {
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.faq-section .section-title h3::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  background-color: #fbb13d;
+  bottom: -10px;
+  right: 0;
+}
+.faq-section .faq-accordion h2 .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #fbb13d;
+  color: #fff;
+  transition: all 0.3s linear;
+  border: none;
+  width: 100%;
+  color: #fbb13d;
+  background-color: #fff;
+  text-align: left;
+  padding: 20px;
+  text-decoration: none;
+}
+.faq-section .faq-accordion h2 .btn-primary {
+  background-color: #fbb13d;
+  color: #fff;
+}
+.faq-section .faq-accordion h2 .btn-primary.reverse {
+  background-color: #fff;
+  border: 1px solid #fbb13d;
+  color: #fbb13d;
+}
+.faq-section .faq-accordion h2 .btn-primary.reverse:hover {
+  background-color: #fbb13d;
+  border: 1px solid #fbb13d;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .faq-section .faq-accordion h2 .btn-primary.reverse:hover {
+    background-color: #fff;
+    border: 1px solid #fbb13d;
+    color: #fbb13d;
+  }
+}
+.faq-section .faq-accordion h2 .btn-primary:hover {
+  background-color: #fff;
+  border: 1px solid #fbb13d;
+  color: #fbb13d;
+}
+.faq-section .faq-accordion h2 .btn-sm {
+  padding: 5px 15px;
+  font-size: 14px;
+}
+.faq-section .faq-accordion h2 .btn-rounded {
+  border-radius: 20px;
+}
+.faq-section .faq-accordion h2 .btn-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.faq-section .faq-accordion h2 .btn-with-icon i {
+  font-size: 14px;
+}
+.faq-section .faq-accordion h2 .btn-accordion {
+  border: none;
+  color: #fbb13d;
+}
+.faq-section .faq-accordion h2 .btn:active {
+  background-color: #fbb13d !important;
+  color: white;
+}
+.faq-section .faq-accordion h2 .btn:focus {
+  background-color: #fbb13d;
+  color: white;
+}
+.faq-section .faq-accordion h2 .btn-accordion {
+  background-color: #fbb13d;
+  color: white;
+}
+.faq-section .faq-accordion h2 .btn-accordion.collapsed {
+  background-color: rgba(245, 245, 245, 0.4901960784);
+  color: #fbb13d;
+}
+.faq-section .faq-accordion h2 .btn-accordion.collapsed:focus {
+  background-color: transparent;
+  color: #fbb13d;
+}
+.faq-section .faq-accordion h2 .btn-accordion.collapsed:active {
+  background-color: transparent;
+  color: white;
+}
+
+.terms-conditions-section .terms-conditions-contents .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.terms-conditions-section .terms-conditions-contents .section-title h3 {
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.terms-conditions-section .terms-conditions-contents .section-title h3::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  background-color: #fbb13d;
+  bottom: -10px;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */

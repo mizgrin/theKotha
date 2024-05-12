@@ -71,6 +71,9 @@ section{
                         padding: 10px 20px;
                         font-weight: 600;
                         color: #252525;
+                        &.active{
+                            color: $primary;
+                        }
                     }
                 }
             }
@@ -583,5 +586,50 @@ footer{
     }
     @media screen and (max-width: 1024px) {
         display: block;
+    }
+}
+.about-section{
+    @include title;
+}
+.mission-section{
+    @include title;
+}
+.faq-section{
+    @include title;
+    .faq-accordion{
+        h2{
+            .btn{
+                @include btn;
+                border: none;
+                width: 100%;
+                color: $primary;
+                background-color: #fff;
+                text-align: left;
+                padding: 20px;
+                text-decoration: none;
+                &-accordion{
+                    background-color: $primary;
+                    color: white;
+                    &.collapsed{
+                        background-color: #f5f5f57d;
+                        color: $primary;
+                        &:focus{
+                            background-color: transparent;
+                            color: $primary;
+                        }
+                        &:active{
+                            background-color: transparent;
+                            color: white;
+                        }
+                    }
+                }
+            }
+          
+        }
+    }
+}
+.terms-conditions-section{
+    .terms-conditions-contents{
+        @include title;
     }
 }
