@@ -46,6 +46,10 @@
             font-size: 14px;
         }
     }
+    &-accordion{
+        border: none;
+        color: $primary;
+    }
     &:active{
         background-color: $primary!important;
         color: white;
