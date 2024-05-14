@@ -18,9 +18,8 @@ section{
     }
 }
 .header{
-    z-index: 999;
     background-color: #ffffffd1;
-    z-index: 99;
+    z-index: 999;
     transition: all 0.3s linear;
     .navbar-brand{
         width: 60%;
@@ -73,6 +72,18 @@ section{
                         color: #252525;
                         &.active{
                             color: $primary;
+                        }
+                        &.btn{
+                            color: white;
+                            &:hover{
+                                color: $primary;
+                            }
+                            &.reverse{
+                                color: $primary;
+                                &:hover{
+                                    color: white;
+                                }
+                            }
                         }
                     }
                 }
