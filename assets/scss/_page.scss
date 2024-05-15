@@ -233,59 +233,35 @@ h1{
     @include title;
     .article-wrapper{
         .col-lg-6{
-            .article-single{
-                gap: 20px;
-                transition: all 0.3s linear;
-                padding:15px;
-                a{
-                    display: block;
-                    flex: 1;
-                    .article-image{
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-               
-                .article-body{
-                    flex: 3;
-                    .article-title{
-                        margin-bottom: 20px;
-                       
-                        h4{
-                            transition: all 0.3s linear;
-                        }
-                    }
-                    .article-meta{
-                        i{
-                            color: $primary;
-                        }
-                    }
-                    .article-description{
-                        p{
-                            font-size: 14px;
-                        }
-                    }
-                }
-                &:hover{
-                    box-shadow: 0px 6px 14px -6px #ddd;
-                    .article-body{
-                        .article-title{
-                            h4{
-                            color: $primary;
-                            }
-                        }
-                    }
-                }
-              
-            }
+            @include articleCard;
             &:nth-child(odd){
                 border-right: 1px solid #ddd;
             }
         }
        
+    }
+}
+
+.article-detail-section{
+    .article-detail-wrap{
+        .article-body{
+           @include title;
+           .article-image{
+            padding-bottom: 40%;
+           }
+        }
+    }
+    .article-sidebar{
+        @include articleCard;
+        a{
+            .article-image{
+                flex: 2;
+            }
+        }
+     
+        .article-body{
+            flex: 3;
+        }
     }
 }
 footer{
@@ -642,5 +618,102 @@ footer{
 .terms-conditions-section{
     .terms-conditions-contents{
         @include title;
+    }
+}
+
+
+.favorite-room-section{
+    @include title;
+    .room-slider{
+        @include roomCard;
+    }
+}
+
+.room-detail-wrap{
+    @include title;
+    .card-body{
+        padding: 20xpx 15px 15px;
+        .room-info{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            i{
+                color: $primary;
+            }
+        }
+        .room-info-meta{
+            padding: 10px 0px;
+            margin-bottom: 20px;
+            i{
+                color: $primary;
+            }
+            span{
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .type-tag {
+                padding: 20px 0px 0px;
+                span{
+                    border: 1px solid $primary;
+                    padding:5px 15px;
+                    background-color: transparent;
+                    border-radius: 20px;
+                    color: $primary;
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+            }
+         
+        }
+    }
+}
+
+.room-fav{
+    @include roomCard;
+}
+
+.room-picture-slider{
+    button{
+        color:red;
+        &.slick-arrow{
+            top: 40%;
+            z-index: 99;
+            width: 30px;
+            height:30px;
+            background-position: 45% 50%;
+            background-size: 60%;
+            background-repeat: no-repeat;
+        
+           
+            background-color: $primary;
+            transition: all 0.3s linear;
+            opacity: 1;
+            border-radius: 50%;
+            &.slick-next {
+                right: 0%;
+                background-image: url(../images/icons/arrow-r-white.png);
+                &:before {
+                    content: '';
+               
+                    
+                }
+            }
+            &.slick-prev {
+                left: 0%;
+                background-image: url(../images/icons/arrow-l-white.png);
+                
+                &:before {
+                    content: '';
+                    
+                }
+               
+            }
+            &:hover{
+                box-shadow: none;
+                background-color: #ddd;
+         
+            }
+        }
     }
 }
